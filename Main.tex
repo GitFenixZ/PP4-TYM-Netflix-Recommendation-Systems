@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \usetheme{Madrid}
 \usecolortheme{beaver}
@@ -7,6 +7,10 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{xr}
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+\usepackage{epstopdf}
+\usepackage{subfigure}
 
 \title[S4 - PP4 - Netflix's Algorithms]
 {Algorithmes de recommandations Netflix}
@@ -23,5 +27,7 @@
 \maketitle
 
 \input{Sommaire/Sommaire.tex}
+\input{Introduction/Introduction.tex}
+\input{PartIV/PartIV.tex}
 
 \end{document}
