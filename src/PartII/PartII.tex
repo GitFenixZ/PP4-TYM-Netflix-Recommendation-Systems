@@ -2,25 +2,25 @@
 \definecolor{darkgreen}{RGB}{0,100,0}
 
 \begin{frame}{\PartII}
-\begin{itemize}
-	\item Faisant partie du filtrage collaboratif...
-	\item {
-		Ce dont on dispose :
-		\begin{figure}[htbp]
-			\centering
-			\hspace{80pt}
-			\includegraphics[width=0.6\textwidth]{ressources/matrix_users_items.png}
-			\caption{Matrice utilisateur-article notée $\mathcal{R}$}
-			\label{fig:matrix-user-article}
-		\end{figure}
-	}
-\end{itemize}
+	\begin{itemize}
+		\item Faisant partie du filtrage collaboratif...
+		\item {
+		      Ce dont on dispose :
+		      \begin{figure}[htbp]
+			      \centering
+			      \hspace{80pt}
+			      \includegraphics[width=0.6\textwidth]{PartII/matrix_users_items.png}
+			      \caption{Matrice utilisateur-article notée $\mathcal{R}$}
+			      \label{fig:matrix-user-article}
+		      \end{figure}
+		      }
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{\PartII}
-\begin{center}
-	\textcolor{red}{\textbf{\large{Problème !!}}}
-\end{center}
+	\begin{center}
+		\textcolor{red}{\textbf{\large{Problème !!}}}
+	\end{center}
 \end{frame}
 
 \begin{frame}{\PartII}
@@ -37,16 +37,16 @@
 		\item $\mathcal{Q}$ comme la matrice d'articles de taille $k \times n$.
 	\end{itemize}
 	\begin{center}
-				\textbf{L'objectif est de trouver P et Q tels que R = PQ.}
+		\textbf{L'objectif est de trouver P et Q tels que R = PQ.}
 	\end{center}
 \end{frame}
 
 \begin{frame}{\PartII}
 	L'erreur quadratique moyenne est donnée par :
 	\begin{equation*}
-	\mathrm{EQM}=\frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n\left(R_{i j}-(P Q)_{i j}\right)^2
- 	\end{equation*}
-	
+		\mathrm{EQM}=\frac{1}{m \times n} \sum_{i=1}^m \sum_{j=1}^n\left(R_{i j}-(P Q)_{i j}\right)^2
+	\end{equation*}
+
 \end{frame}
 
 \begin{frame}{\PartII}
@@ -60,7 +60,7 @@
 \begin{frame}{\PartII}
 	La méthode de descente de gradient stochastique (DGS) se fait avec :
 	\begin{equation*}
-		P_{i k}=P_{i k}+\alpha\left(e_{i j} Q_{k j}-\lambda P_{i k}\right) 
+		P_{i k}=P_{i k}+\alpha\left(e_{i j} Q_{k j}-\lambda P_{i k}\right)
 	\end{equation*}
 	\begin{equation*}
 		Q_{k j}=Q_{k j}+\alpha\left(e_{i j} P_{i k}-\lambda Q_{k j}\right)
