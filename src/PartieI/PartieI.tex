@@ -39,9 +39,9 @@
 \begin{frame}{\PartieI}
     On note :
     \begin{itemize}
-        \item $\mathcal{R}$ comme la matrice originale de taille $m \times n$, où $m$ est le nombre d'utilisateurs et $n$ est le nombre d'items.
-        \item $\mathcal{P}$ comme la matrice d'utilisateurs de taille $m \times k$, où $k$ est le nombre de facteurs latents.
-        \item $\mathcal{Q}$ comme la matrice d'items de taille $k \times n$.
+        \item $\mathcal{R} \in \mathcal{M}_{n,p}(\mathbb{R})$,
+        \item $\mathcal{P} \in \mathcal{M}_{n,k}(\mathbb{R})$,
+        \item $\mathcal{Q} \in \mathcal{M}_{k,p}(\mathbb{R})$.
     \end{itemize}
     \begin{center}
         \textbf{L'objectif est de trouver P et Q tels que R = PQ.}
@@ -49,7 +49,7 @@
 \end{frame}
 
 \begin{frame}{\PartieI}
-    L'erreur quadratique moyenne est donnée par :
+    La fonction objective :
     \begin{equation*}
         \min _{q, p} \sum_{(u, i) \in \kappa}\left(r_{u i}-q_i^T p_u\right)^2+\lambda\left(\left\|q_i\right\|^2+\left\|p_u\right\|^2\right)
     \end{equation*}
